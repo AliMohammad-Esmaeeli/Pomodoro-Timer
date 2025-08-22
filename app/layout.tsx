@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Head from 'next/head'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import './globals.css'
@@ -16,8 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+      <Head>
         <style>{`
 html {
   font-family: ${GeistSans.style.fontFamily};
@@ -25,7 +25,7 @@ html {
   --font-mono: ${GeistMono.variable};
 }
         `}</style>
-      </head>
+      </Head>
       <body>{children}</body>
     </html>
   )
